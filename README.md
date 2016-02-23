@@ -1,4 +1,4 @@
-# Field Pack Name (Version)
+# Field Pack Name
 splunkscript
 
 # Description
