@@ -10,3 +10,5 @@ Set the following variables in the file to correct values
 ```
 
 Then run the script (requires perl installed) 
+
+This script was written by https://github.com/srikns
