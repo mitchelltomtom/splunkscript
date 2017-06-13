@@ -36,8 +36,7 @@ Configure the metrics.properties.template and rename to metrics.properties
 Configure the log4perf.conf file with the correct **METRICS_LOGFILE.filename**, **AUDIT_LOGFILE.filename** and **ERROR_LOGFILE.filename** locations. 
 **NOTE:** These files must be named **metrics.log**, **audit.log** and **error.log** and have a directory each, only the directory should change relevant to your desired output directories.
 
-Run or schediled the **run.sh** (requires perl installed) 
-
+Run or schedule the **run.sh** (requires perl installed) 
 
 # Disclaimer 
 I am not a perl developer.
