@@ -5,7 +5,6 @@ use warnings;
 use POSIX qw( strftime );
 use FindBin;
 use lib "$FindBin::Bin/.";
-use MIME::Base64;
 
 #Add trim functionality
 sub trim { my $s = shift; $s =~ s/^\s+|\s+$//g; return $s };
@@ -208,8 +207,7 @@ sub DoMetricsRequest{
 
           # Output line to CSV log file
           $metricsLogger->info("$ActualStartTimestamp,$ActualEndTimestamp,$Domain,$Host,$Process,$AgentName,$Resource,$MetricName,$ValueType,$CorrectedNumericValue,$IntegerMin,$IntegerMax,$ValueCount,$StringValue,$DateValue");
-          #print "$ActualStartTimestamp, $ActualEndTimestamp,$Domain,$Host!$Process!$AgentName,$Resource,$MetricName,$CorrectedValue\n";
-
+ 
   }
   alarm 0;
   close (CLW);
@@ -227,12 +225,3 @@ sub DoMetricsRequest{
 
 DoMetricsRequest();
 
-#Loop to run query on a specific interval:
-#$interval = 60;
-#for (;;) {
-#    my $start = time;
-#    DoMetricsRequest();
-#    if ((my $remaining = $interval - (time - $start)) > 0) {
-#        sleep $remaining;
-#    }
-#}
