@@ -6,7 +6,7 @@ Perl script to extract data from APM for splunk. Adapted from https://github.com
 
 Adds considerations for Windows when generating CLW requests 
 
-Adds in a logger and log file management capability specified in parameters (Use it's own copy of Log4Perl for ease of deployment). 
+Adds in a logger for **metrics**, **error** and **audit** logs and log file management capability specified in parameters (Use it's own copy of Log4Perl for ease of deployment). 
 
 It also adds the capability to take in the query parameters from a properties file. 
 
@@ -29,9 +29,14 @@ file in this repository.  Licenses may vary by repository.  Your download and us
 
 Copy this folder to your EM.  You will need perl installed.
 
+Create your **metrics**, **error** and **audit** output folders.
+
 Configure the metrics.properties.template and rename to metrics.properties
 
-Then run the run.sh (requires perl installed) 
+Configure the log4perf.conf file with the correct **METRICS_LOGFILE.filename**, **AUDIT_LOGFILE.filename** and **ERROR_LOGFILE.filename** locations. 
+**NOTE:** These files must be named **metrics.log**, **audit.log** and **error.log** and have a directory each, only the directory should change relevant to your desired output directories.
+
+Run or schediled the **run.sh** (requires perl installed) 
 
 
 # Disclaimer 
