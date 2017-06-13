@@ -1,0 +1,51 @@
+####################################
+#           Auth Settings          #
+####################################
+#username=user
+#encrypted_password=pwd
+
+####################################
+#           Wily Config            #
+####################################
+momhost=10.9.8.155
+port=6001
+#CLWorkstation=<CLWorkstation.jar location>
+
+####################################
+# Regex Settings for metrics query #
+####################################
+#agentRegex=(.*)casapi(.*)
+#metricRegex=(.*)
+#domainRegex=(.*)
+
+####################################
+# Time Settings for metrics query  #
+####################################
+#Offset time we are looking at by
+offset=60
+#Number of seconds of data to query
+range=60
+#Metric Interval, metrics every <frequency> seconds
+frequency=15
+#timeout setting for the query.
+timeout=50
+
+
+########################################
+# Directory Settings for metrics query #
+########################################
+metricsDirectory=/opt/splunkforwarder/wily-metrics-logger/metrics
+auditDirectory=/opt/splunkforwarder/wily-metrics-logger/audit
+errorDirectory=/opt/splunkforwarder/wily-metrics-logger/error
+
+#Settings for when to roll over and delete metrics log files
+maxNumberMetricsFiles=10
+maxMetricsFileSizeMB=10
+
+#Settings for when to roll over and delete audit log files
+maxNumberAuditFiles=10
+maxAuditFileSizeMB=10
+
+#Settings for when to roll over and delete error log files
+maxNumberErrorFiles=10
+maxErrorFileSizeMB=10
